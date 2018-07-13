@@ -6,19 +6,9 @@
     <description>Recent content on Ashwani Kumar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jul 2018 19:10:20 +0530</lastBuildDate>
     
 	<atom:link href="https://ashwani762.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Test</title>
-      <link>https://ashwani762.github.io/posts/test/</link>
-      <pubDate>Fri, 13 Jul 2018 19:10:20 +0530</pubDate>
-      
-      <guid>https://ashwani762.github.io/posts/test/</guid>
-      <description>testing out the script</description>
-    </item>
     
   </channel>
 </rss>
