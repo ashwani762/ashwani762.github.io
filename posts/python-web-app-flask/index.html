@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="author" content="Ashwani Kumar">
+    	<meta name="description" content="Ashwani Kumar Personal Blog">
+    	<meta name="keywords" content="blog,developer,personal">
+    	<base href="https://ashwani762.github.io/">
+    	<title>
+	  Creating Website using Flask · Ashwani Kumar
+</title>
+    	<link rel="canonical" href="https://ashwani762.github.io/posts/python-web-app-flask/">
+    	<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    	<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    	<link rel="stylesheet" href="https://ashwani762.github.io/css/style.min.css">
+
+    	
+
+    	
+      	<link rel="stylesheet" href="https://ashwani762.github.io/css/syntax.css">
+    	
+
+    	<link rel="icon" type="image/png" href="https://ashwani762.github.io/images/favicon-32x32.png" sizes="32x32">
+    	<link rel="icon" type="image/png" href="https://ashwani762.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    	
+  	</head>
+
+  	<body class="">
+    	<main class="wrapper">
+      		<nav class="navigation">
+	<section class="container">
+    	<a class="navigation-title" href="https://ashwani762.github.io/">
+      	Ashwani Kumar
+    	</a>
+    	<ul class="navigation-list  float-right ">
+      	
+        	
+          	<li class="navigation-item">
+            	<a class="navigation-link" href="https://ashwani762.github.io/posts/">Blog</a>
+          	</li>
+        	
+          	<li class="navigation-item">
+            	<a class="navigation-link" href="https://ashwani762.github.io/about/">About</a>
+          	</li>
+        	
+      	
+      	
+    	</ul>
+  	</section>
+</nav>
+
+      		<div class="content">
+        		
+	<section class="container post">
+  <article>
+    <header>
+      <h1 class="title">Creating Website using Flask</h1>
+      <h2 class="date">July 18, 2018</h2>
+      
+      
+      
+
+      3 minute read
+      
+    </header>
+    
+
+<p>Today I&rsquo;m going to walk you through a tutorial on creating a simple web app using Flask.</p>
+
+<p>For those who are new to term <strong>Flask</strong>:</p>
+
+<ul>
+<li>Flask is a Python Framework for creating web application</li>
+<li>Has a simple syntax and is very easy to use</li>
+<li>Has a built in development server and debugger</li>
+<li>Uses Jinja2 templating</li>
+</ul>
+
+<p>You can read more about it on it&rsquo;s website <a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a></p>
+
+<p><strong>First Thing First</strong> :- Before moving further we need some packages and of course Python to get started.</p>
+
+<h4 id="requirements">Requirements</h4>
+
+<ul>
+<li><a href="https://www.python.org/">Python</a> (either 2.7 or 3.x)</li>
+<li>pip or easy_install</li>
+<li>A code editor (Anything you like VScode, Sublime or Vim)</li>
+</ul>
+
+<h4 id="setting-up-environment">Setting up Environment</h4>
+
+<p>Open up <strong>Command Prompt</strong> or the <strong>Bash Shell</strong> and download the python package Flask by issuing the command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pip install flask</code></pre></div>
+<hr />
+
+<h5 id="alternate-step">Alternate Step</h5>
+
+<p>You can also use virtualenv to create a Python Virtual Environment and then install Flask in it. Using virtualenv has an added advantage which we&rsquo;ll discuss later</p>
+
+<p>To use virtualenv use the following commands:</p>
+
+<p>make sure you install virtualenv using</p>
+<div class="highlight"><pre class="chroma">pip install virtualenv</pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir &lt;your_directory_name&gt;          <span class="c1"># mkdir Flask-App
+</span><span class="c1"></span>virtualenv &lt;name_of_the_environment&gt; <span class="c1"># virtualenv env
+</span><span class="c1"></span><span class="nb">source</span> env/Scripts/activate
+pip install flask</code></pre></div>
+<hr />
+
+<p>Once you have set up the environment, you&rsquo;re good to go.</p>
+
+<h2 id="next-step">Next Step</h2>
+
+<p>Create a new file and load it in the Editor. make sure the extension of the file ends with .py</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch main.py    <span class="c1"># Create file
+</span><span class="c1"></span>vim main.py</code></pre></div>
+<p>The basic structure of the Flask App is very simple:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></code></pre></div>
+<p>We have imported the Flask app, created a flask object &ldquo;app&rdquo; and called the run method of flask.</p>
+
+<p>To execute the script just head over to the bash and write:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">python main.py</code></pre></div>
+<p>Your we app will now be running on the localhost on port 5000. You can view it on <strong><a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a></strong> or <strong>localhost:5000</strong></p>
+
+<h4 id="url-routes">URL Routes</h4>
+
+<p>URL Routing makes URLs in your Web app easy to remember. It can be</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/hello
+/member/name</code></pre></div>
+<p>To create we use the following structure</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span></code></pre></div>
+<p><strong>Remember:</strong> We do not use print here. print is for the console. We use return here to display on the web app</p>
+
+<p><strong>Assignment:</strong> Go ahead and create some of your own routes.</p>
+
+<p>You can also pass in the parameters to the flask app.</p>
+
+<p>Example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&lt;name&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sayName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span></code></pre></div>
+<p><strong>Don&rsquo;t forget to execute the script again after code changes.</strong></p>
+
+<p>Now you can visit the following urls also:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">localhost:5000/hello
+localhost:5000/John</code></pre></div>
+<p>This was just the basics of the Flask. You can extend it with the HTML/CSS/JS to create a very good looking website. More on which later.</p>
+
+<hr />
+
+<h4 id="some-tips-and-hacks">Some Tips and Hacks</h4>
+
+<blockquote>
+<ul>
+<li>In the current app, you have to execute the script again and again to see the changes. Instead of this you can add a <strong>DEBUG</strong> variable which will auto load the application if source code is updated. You can add it via the app object or through the parameter in the run method as follows:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">app</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span></code></pre></div>
+<p><strong>OR</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span></code></pre></div>
+<ul>
+<li>There may be chances when you want to run the web app on different port. To do so, just set the port parameter in run method to the port you want</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">port</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">)</span></code></pre></div>
+<ul>
+<li>You can also change the IP parameter using</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span> <span class="o">=</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">)</span></code></pre></div></blockquote>
+
+<p>We will talk about the templating in flask another time. Until then, if you have any problem or query just ask me on Twitter or send an Email to me at <a href="mailto:ashwani762kumar@gmail.com">ashwani762kumar@gmail.com</a>. I&rsquo;ll be happy to help</p>
+
+  	</article>
+  <br/> 
+</section>
+
+
+      		</div>
+      		<footer class="footer">
+	<section class="container">
+		
+		<p>If it works, then don't touch it</p>
+	</section>
+</footer>
+
+    	</main>
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-122356247-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </body>
+</html>

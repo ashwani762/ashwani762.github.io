@@ -6,9 +6,46 @@
     <description>Recent content in Tags on Ashwani Kumar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Wed, 18 Jul 2018 15:42:43 +0530</lastBuildDate>
     
 	<atom:link href="https://ashwani762.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>App</title>
+      <link>https://ashwani762.github.io/tags/app/</link>
+      <pubDate>Wed, 18 Jul 2018 15:42:43 +0530</pubDate>
+      
+      <guid>https://ashwani762.github.io/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>https://ashwani762.github.io/tags/flask/</link>
+      <pubDate>Wed, 18 Jul 2018 15:42:43 +0530</pubDate>
+      
+      <guid>https://ashwani762.github.io/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://ashwani762.github.io/tags/python/</link>
+      <pubDate>Wed, 18 Jul 2018 15:42:43 +0530</pubDate>
+      
+      <guid>https://ashwani762.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://ashwani762.github.io/tags/web/</link>
+      <pubDate>Wed, 18 Jul 2018 15:42:43 +0530</pubDate>
+      
+      <guid>https://ashwani762.github.io/tags/web/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -10,5 +10,23 @@
 	<atom:link href="https://ashwani762.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Flask</title>
+      <link>https://ashwani762.github.io/categories/flask/</link>
+      <pubDate>Wed, 18 Jul 2018 15:42:43 +0530</pubDate>
+      
+      <guid>https://ashwani762.github.io/categories/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://ashwani762.github.io/categories/python/</link>
+      <pubDate>Wed, 18 Jul 2018 15:42:43 +0530</pubDate>
+      
+      <guid>https://ashwani762.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
